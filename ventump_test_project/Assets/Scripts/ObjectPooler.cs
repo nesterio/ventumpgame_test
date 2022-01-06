@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectPooler : MonoBehaviour
 {
 
-	
+
     [System.Serializable]
     public class Pool
     {
@@ -53,12 +53,12 @@ public class ObjectPooler : MonoBehaviour
 
 
 
-    public GameObject SpawnFromPool(string tag)
+    public void SpawnFromPool(string tag)
     {
         if(!poolDictionary.ContainsKey(tag))
         {
             Debug.LogWarning("Pool with tag " + tag + "does not exist...");
-            return null;
+            return;
         }
 
         GameObject objectToSpawn = poolDictionary[tag].Dequeue();
@@ -66,7 +66,7 @@ public class ObjectPooler : MonoBehaviour
 
         poolDictionary[tag].Enqueue(objectToSpawn);
 
-        return objectToSpawn;
+        return;
     }
 
 

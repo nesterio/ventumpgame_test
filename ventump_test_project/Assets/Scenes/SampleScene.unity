@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 113921834}
   - component: {fileID: 113921837}
   - component: {fileID: 113921836}
-  - component: {fileID: 113921835}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -156,20 +155,6 @@ Transform:
   m_Father: {fileID: 1699230108}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &113921835
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 113921833}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &113921836
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -297,7 +282,7 @@ GameObject:
   - component: {fileID: 234023846}
   - component: {fileID: 234023845}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: SpawnText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -531,7 +516,6 @@ GameObject:
   - component: {fileID: 557848338}
   - component: {fileID: 557848341}
   - component: {fileID: 557848340}
-  - component: {fileID: 557848339}
   m_Layer: 0
   m_Name: Wall_Right
   m_TagString: Untagged
@@ -553,20 +537,6 @@ Transform:
   m_Father: {fileID: 1699230108}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
---- !u!64 &557848339
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557848337}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &557848340
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -627,7 +597,6 @@ GameObject:
   - component: {fileID: 602911442}
   - component: {fileID: 602911445}
   - component: {fileID: 602911444}
-  - component: {fileID: 602911443}
   m_Layer: 0
   m_Name: Wall_Straight
   m_TagString: Untagged
@@ -649,20 +618,6 @@ Transform:
   m_Father: {fileID: 1699230108}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
---- !u!64 &602911443
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602911441}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &602911444
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -712,6 +667,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602911441}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &664341945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4a3afcc1f30ee4081bb6164c3a655b07, type: 3}
+  m_PrefabInstance: {fileID: 2133432762}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &664341947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664341945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8edc58984bc264ef28d0523f4f80dcfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &664341948
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664341945}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 0.3, z: 1.5}
+  m_Center: {x: -0.3, y: 0.31, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,7 +801,6 @@ GameObject:
   - component: {fileID: 799067095}
   - component: {fileID: 799067098}
   - component: {fileID: 799067097}
-  - component: {fileID: 799067096}
   m_Layer: 0
   m_Name: Wall_Left
   m_TagString: Untagged
@@ -838,20 +822,6 @@ Transform:
   m_Father: {fileID: 1699230108}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!64 &799067096
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799067094}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &799067097
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -995,10 +965,9 @@ GameObject:
   - component: {fileID: 972860584}
   - component: {fileID: 972860588}
   - component: {fileID: 972860587}
-  - component: {fileID: 972860586}
   - component: {fileID: 972860585}
   m_Layer: 5
-  m_Name: SpawnButton (1)
+  m_Name: Balance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1039,50 +1008,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: -5, y: -5}
   m_UseGraphicAlpha: 1
---- !u!114 &972860586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972860583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 972860587}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &972860587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1133,7 +1058,7 @@ GameObject:
   - component: {fileID: 1504398467}
   - component: {fileID: 1504398466}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BalanceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1178,7 +1103,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Balance: 30'
+  m_text: 'Balance: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1265,6 +1190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1561382561}
   - component: {fileID: 1561382562}
+  - component: {fileID: 1561382563}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1301,7 +1227,21 @@ MonoBehaviour:
   pools:
   - tag: Coin
     prefab: {fileID: 3920234485686388534, guid: 8612f501c01314b5f8f98215d0b11f7b, type: 3}
-    size: 40
+    size: 30
+--- !u!114 &1561382563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561382560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55043197223bb4fd2905c29da0449e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BalanceText: {fileID: 1504398466}
+  DefaultBalance: 30
 --- !u!1 &1699230107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,7 +1375,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1962036793}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1561382563}
+        m_TargetAssemblyTypeName: ManagerScript, Assembly-CSharp
+        m_MethodName: SpawnCoin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1962036793
 MonoBehaviour:
   m_ObjectHideFlags: 0
